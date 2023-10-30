@@ -25,7 +25,7 @@ def scrape_website():
 
         # Print the scraped data
         for item in data:
-            print(json.dumps(item, indent=2))
+            print(json.dumps(item.to_dict(), indent=2))
 
         next_page_button = driver.find_element(By.CSS_SELECTOR, "button#next-page")
         if next_page_button.get_attribute("disabled"):

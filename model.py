@@ -24,3 +24,18 @@ class P2PDataRow:
         self.available = available
         self.limit = limit
         self.payment = payment
+
+    def to_dict(self):
+        return {
+            "advertiser": self.advertiser,
+            "trade_partner_info": self.trade_partner_info,
+            "merchant_badge": self.merchant_badge,
+            "shield_badge": self.shield_badge,
+            "price": self.price,
+            "currency": self.currency,
+            "orders": self.orders,
+            "completion": self.completion,
+            "available": self.available,
+            "limit": self.limit,
+            "payment": self.payment,
+        }
