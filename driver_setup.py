@@ -8,4 +8,5 @@ def setup_driver():
     service = Service(executable_path=path)
     options = ChromeOptions()
     driver = webdriver.Chrome(service=service, options=options)
+    driver.set_window_size(400, 800)
     return driver
