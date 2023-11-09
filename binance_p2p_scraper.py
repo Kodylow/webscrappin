@@ -11,16 +11,17 @@ from model import P2PDataRow
 logging.basicConfig(level=logging.INFO)
 
 
-def scrape_p2p_website(website):
+def scrape_binance_p2p_website(website):
     driver = setup_driver()
     driver.get(website)
 
     wait = WebDriverWait(driver, 10)
     data = []
 
-    logging.info("Starting to scrape Buy pages...")
+    logging.info("Starting Binance Scrape pages...")
+    logging.info("Straping Buy pages...")
     scrape_pages(driver, wait, data, "Buy")
-    logging.info("Scraping of Buy pages complete.")
+    logging.info("Buy pages complete.")
 
     try:
         sell_button = driver.find_element(

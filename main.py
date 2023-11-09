@@ -1,4 +1,4 @@
-from p2p_scraper import scrape_p2p_website
+from binance_p2p_scraper import scrape_binance_p2p_website
 from advertiser_scraper import scrape_advertiser_pages
 from config import website, fiats
 from model import fieldnames
@@ -19,5 +19,5 @@ if __name__ == "__main__":
     total_fiats = len(fiats)
     for index, fiat in enumerate(fiats):
         logging.info(f"Scraping {website + fiat}... ({index+1}/{total_fiats})")
-        data = scrape_p2p_website(website + fiat)
+        data = scrape_binance_p2p_website(website + fiat)
         scrape_advertiser_pages(data)
