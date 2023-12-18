@@ -1,5 +1,6 @@
 website = f"https://p2p.binance.com/en/trade/all-payments/BTC?fiat="
 path = "/opt/homebrew/bin/chromedriver"
+# path = "/Users/kody/Desktop/chromedriver_mac_arm64/chromedriver"
 
 fiats = ["USD"]
 fiats = [
